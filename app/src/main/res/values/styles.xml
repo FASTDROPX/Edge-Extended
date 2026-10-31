@@ -1,0 +1,28 @@
+<resources>
+<style name="AppTheme" parent="Theme.Material3Expressive.DayNight.NoActionBar">
+ <item name="colorPrimary">@color/tone_405f6b</item><item name="colorOnPrimary">@color/tone_ffffff</item>
+ <item name="colorPrimaryContainer">@color/tone_d7eaf1</item><item name="colorOnPrimaryContainer">@color/tone_12333d</item>
+ <item name="colorSecondary">@color/tone_52636b</item><item name="colorOnSecondary">@color/tone_ffffff</item>
+ <item name="colorSecondaryContainer">@color/tone_e0e9ed</item><item name="colorOnSecondaryContainer">@color/tone_26383f</item>
+ <item name="colorTertiary">@color/tone_58627b</item><item name="colorTertiaryContainer">@color/tone_dfe6f7</item>
+ <item name="colorOnTertiaryContainer">@color/tone_252f46</item><item name="colorSurface">@color/tone_f8fafb</item>
+ <item name="colorOnSurface">@color/tone_191d20</item><item name="colorOnSurfaceVariant">@color/tone_536168</item>
+ <item name="colorSurfaceContainerLowest">@color/tone_ffffff</item><item name="colorSurfaceContainerLow">@color/tone_f0f4f6</item>
+ <item name="colorSurfaceContainer">@color/tone_eaf0f3</item><item name="colorSurfaceContainerHigh">@color/tone_e3eaee</item>
+ <item name="colorSurfaceContainerHighest">@color/tone_dbe4e9</item><item name="colorSurfaceVariant">@color/tone_e0e7eb</item>
+ <item name="colorOutline">@color/tone_74838b</item><item name="colorOutlineVariant">@color/tone_c8d3d9</item>
+ <item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">@bool/light_system_icons</item>
+ <item name="android:statusBarColor">@color/tone_f8fafb</item><item name="android:navigationBarColor">@color/tone_f0f4f6</item>
+ <item name="android:windowLightNavigationBar">@bool/light_system_icons</item><item name="android:windowBackground">@color/tone_f8fafb</item>
+ <item name="materialCardViewStyle">@style/EdgeExtendedCard</item>
+ <item name="textInputStyle">@style/EdgeExtendedDropdown</item>
+</style>
+<style name="EdgeExtendedCard" parent="Widget.Material3.CardView.Filled">
+ <item name="cardElevation">0dp</item><item name="strokeWidth">0dp</item>
+ <item name="cardCornerRadius">18dp</item><item name="cardBackgroundColor">?attr/colorSurfaceContainerLow</item>
+</style>
+<style name="EdgeExtendedDropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+ <item name="boxCornerRadiusTopStart">16dp</item><item name="boxCornerRadiusTopEnd">16dp</item>
+ <item name="boxCornerRadiusBottomStart">16dp</item><item name="boxCornerRadiusBottomEnd">16dp</item>
+</style>
+</resources>

@@ -1,0 +1,22 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'dev.edgewave'
+ compileSdk 35
+ buildToolsVersion '35.0.0'
+ defaultConfig { applicationId 'dev.edgewave'; minSdk 29; targetSdk 35; versionCode 27; versionName '1.0' }
+ buildTypes { release { minifyEnabled false } }
+ testOptions {
+  unitTests.includeAndroidResources = true
+  unitTests.all {
+   ['https.proxyHost','https.proxyPort','http.proxyHost','http.proxyPort','javax.net.ssl.trustStore'].each { key ->
+    if(System.getProperty(key)) systemProperty(key,System.getProperty(key))
+   }
+  }
+ }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies {
+ implementation 'com.google.android.material:material:1.14.0'
+ testImplementation 'junit:junit:4.13.2'
+ testImplementation 'org.robolectric:robolectric:4.14.1'
+}

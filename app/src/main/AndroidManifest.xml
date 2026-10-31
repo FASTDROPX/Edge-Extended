@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/><uses-permission android:name="android.permission.RECORD_AUDIO"/><uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/><uses-permission android:name="android.permission.FOREGROUND_SERVICE"/><uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE"/><uses-permission android:name="android.permission.POST_NOTIFICATIONS"/><uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+<application android:name=".EdgeExtendedApplication" android:hardwareAccelerated="true" android:theme="@style/AppTheme" android:label="@string/app_name" android:localeConfig="@xml/locales_config" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:allowBackup="false" android:supportsRtl="true">
+<activity android:name=".WhiteStageActivity" android:exported="false"/><activity android:name=".EffectsPreviewActivity" android:exported="false"/><activity android:name=".MainActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+<service android:name=".WaveService" android:exported="false" android:foregroundServiceType="specialUse"><property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-enabled persistent audio-reactive screen edge overlay and volume animation"/></service>
+<service android:name=".VolumeKeysService" android:label="@string/volume_keys_label" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
+<intent-filter><action android:name="android.accessibilityservice.AccessibilityService"/></intent-filter>
+<meta-data android:name="android.accessibilityservice" android:resource="@xml/volume_keys_service"/>
+</service>
+<service android:name=".TrackAccessService" android:label="@string/track_access_label" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" android:exported="true"><intent-filter><action android:name="android.service.notification.NotificationListenerService"/></intent-filter></service>
+<service android:name="androidx.appcompat.app.AppLocalesMetadataHolderService" android:enabled="false" android:exported="false"><meta-data android:name="autoStoreLocales" android:value="true"/></service>
+</application></manifest>
